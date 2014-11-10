@@ -4,7 +4,7 @@
 	<title>FT scroller demo: horizontal paged</title>
 	<style>
 		.bgimg1 {
-			background-image: url("http://pocketnow.com/wp-content/uploads/2013/10/apps-note-3.jpg");
+			background-image: url("background.jpg");
 		}
 		/* Styles not relevant to scrolling (just to make the demo look neat and tidy) */
 		body { font-family: sans-serif; -webkit-text-size-adjust: 100% }
@@ -44,8 +44,46 @@
 	</style>
 </head>
 <body>
+	<h1 id="time">Time: 0</h1>
+	<h1 id="target">Action Memo</h1>
 	<div id='scrollable'>
 		<div id='sectionwrapper'>
+			<section>
+				<div class = "bgimg1">
+					<row class = "row">
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+					</row>
+					<row class = "row">
+						<button id="actionMemo" class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+					</row>					<row class = "row">
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button id="BofA" class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button id="Current" class="btn">Click Me!</button>
+					</row>					<row class = "row">
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+					</row>					<row class = "row">
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+						<button class="btn">Click Me!</button>
+					</row>
+				</div>
+			</section>
 			<section>
 				<div class = "bgimg1">
 					<row class = "row">
@@ -82,129 +120,12 @@
 					</row>
 				</div>
 			</section>
-
-<section>
-				<div class = "bgimg1">
-					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>
-					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>
-				</div>
-			</section>
-
-<section>
-				<div class = "bgimg1">
-					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>
-					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>
-				</div>
-			</section>
-
-<section>
-				<div class = "bgimg1">
-					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>
-					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>					<row class = "row">
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-						<button class="btn">Click Me!</button>
-					</row>
-				</div>
-			</section>
-
-			<section><div>Page 2<p>...lots...</p></div></section>
-			<section><div>Page 3<p>...and lots...</p></div></section>
-			<section><div>Page 4<p>...of pages...</p></div></section>
-			<section><div>Page 5<p>...in one single...</p></div></section>
-			<section><div>Page 6<p>...scroll movement.  FTScroller will snap to the nearest page when the scroll animation comes to rest.</p></div></section>
 		</div>
 	</div>
 
 	<!--Include FT Scroller source (can be included at any point as long as it's loaded before being used)-->
 	<script src='lib/ftscroller.js'></script>
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!--Set up the scroller-->
 	<script>
 		var scroller = new FTScroller(document.getElementById('scrollable'), {
@@ -212,6 +133,27 @@
 			snapping: false,
 			scrollbars: false
 		});
+		var n = 0;
+		var myVar=setInterval(function () {myTimer()}, 1000);
+
+		function myTimer() {
+			n = n + 1;
+		    $("#time").html("Time: " + n);
+		}
+
+		$("#actionMemo").click(function(){
+			$("#target").html("BofA");
+		});
+
+		$("#BofA").click(function(){
+			$("#target").html("Current");
+		});
+
+		$("#Current").click(function(){
+			$("#target").html("BofA");
+			alert("Congratulation! Finish in " + n + " Seconds.");
+		});
+
 	</script>
 </body>
 </html>

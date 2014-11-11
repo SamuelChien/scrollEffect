@@ -57,7 +57,6 @@ o
 	</style>
 </head>
 <body>
-
 	<h1 id="time">Time: 0</h1>
 	<h1 id="target">Action Memo</h1>
 	<div id='scrollable'>
@@ -269,29 +268,27 @@ o
 			n = n + 1;
 		    $("#time").html("Time: " + n);
 		}
+
+		var errorCount = 0;
+		var targets = ["Chrome", "evernote", "Docs"];
 		$("button").click(function(){
-			//alert($(this).css('background-color'))  // shows the 'color' css setting. i just wanted to see how its represented does (this) actually work
-				if ($(this).css('background-color') != "green"){  //<--- problem here if it isnt green.. set to green but its not working/!?!
-					alert("color should change");
+			var selected = this.id;
+			if (selected === targets[0]){
+				if ($(this).css('background-color') != "green"){  
 					$(this).css('border', 'dotted');
 					$(this).css('background-color', 'green');
-
+				}
+				targets.splice(0, 1);
+				if (targets.length === 0){
+					alert("Trial completed! Finished in " + n + " seconds with " + errorCount + " errors.");
+				}
+			}
+			else{
+				$(this).css('background-color', 'red');
+				setTimeout(function(){$('#' + selected).css('background-color', 'transparent')}, 1000);
+				errorCount = errorCount + 1;
 			}
 		});
-
-		$("#actionMemo").click(function(){
-			$("#target").html("BofA");
-		});
-
-		$("#BofA").click(function(){
-			$("#target").html("Current");
-		});
-// HAVE TO MAKE SURE USER HAS ACQUIRED ALL TARGETS BEFORE..
-		$("#FUBAR").click(function(){
-			$("#target").html("BofA");
-			alert("Congratulation! Finish in " + n + " Seconds.");
-		});
-
 	</script>
 </body>
 </html>

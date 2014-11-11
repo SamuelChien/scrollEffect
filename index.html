@@ -33,6 +33,7 @@ o
 
 		.btn {
 			margin-top:0px;
+			color:transparent;
 		    background:transparent;
 		    border:none;
 		    outline:none;
@@ -45,15 +46,7 @@ o
 		.row{
 			float:left;
 		}
-		.btn:hover {
-		  background: #3cb0fd;
-		  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-		  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-		  text-decoration: none;
-		}
+
 	</style>
 </head>
 <body>
@@ -275,12 +268,14 @@ o
 				targets.splice(0, 1);
 				if (targets.length === 0){
 					var timeTaken = $.now() - startTime;
-					alert("Trial completed! Finished in " + timeTaken/1000 + " seconds with " + errorCount + " errors.");
+					alert("Trial completed! Finished in " + timeTaken/1000 + " seconds with " + errorCount + " errors. Please show the experimenter.");
+					document.open("home.html")
 				}
 			}
 			else{
 				$(this).css('background-color', 'red');
-				setTimeout(function(){$('#' + selected).css('background-color', 'transparent')}, 1000);
+				$(this).fadeTo(1000,0);
+				//setTimeout(function(){$('#' + selected).css('background-color', 'transparent')}, 1000);
 				errorCount = errorCount + 1;
 			}
 		});

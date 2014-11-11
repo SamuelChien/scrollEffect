@@ -261,13 +261,7 @@ o
 			snapping: false,
 			scrollbars: false
 		});
-		var n = 0;
-		var myVar=setInterval(function () {myTimer()}, 1000);
-
-		function myTimer() {
-			n = n + 1;
-		    $("#time").html("Time: " + n);
-		}
+		var startTime = $.now();
 
 		var errorCount = 0;
 		var targets = ["Chrome", "evernote", "Docs"];
@@ -280,7 +274,8 @@ o
 				}
 				targets.splice(0, 1);
 				if (targets.length === 0){
-					alert("Trial completed! Finished in " + n + " seconds with " + errorCount + " errors.");
+					var timeTaken = $.now() - startTime;
+					alert("Trial completed! Finished in " + timeTaken/1000 + " seconds with " + errorCount + " errors.");
 				}
 			}
 			else{

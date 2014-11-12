@@ -3,6 +3,10 @@
 <head>
 	<title>FT scroller demo: horizontal paged</title>
 	<style>
+		h1 {
+			visibility: hidden;
+			display: inline;
+		}
 		.bgimg1 {
 			background-image: url("background1.png");
 		}
@@ -18,7 +22,7 @@
 		.bgimg5 {
 			background-image: url("background5.png");
 		}
-o
+
 		/* Styles not relevant to scrolling (just to make the demo look neat and tidy) */
 		body { font-family: sans-serif; -webkit-text-size-adjust: 100% }
 		#scrollable section:nth-child(2n) { background-color: #eee;}
@@ -50,7 +54,7 @@ o
 	</style>
 </head>
 <body>
-	<h1 id="time">Time: 0</h1>
+	<h1 id="time" >Time: 0</h1>
 	<h1 id="target">Action Memo</h1>
 	<div id='scrollable'>
 		<div id='sectionwrapper'>
@@ -257,7 +261,8 @@ o
 		var startTime = $.now();
 
 		var errorCount = 0;
-		var targets = ["Chrome", "evernote", "Docs"];
+		var targets = 
+			["wechat", "Airdroid", "charades", "zedge", "hangout", "evernote", "downloads", "8tracks", "IFTTT", "drive"];	
 		$("button").click(function(){
 			var selected = this.id;
 			if (selected === targets[0]){
@@ -273,6 +278,7 @@ o
 				}
 			}
 			else{
+				$(this).fadeTo(1, 1);
 				$(this).css('background-color', 'red');
 				$(this).fadeTo(1000,0);
 				//setTimeout(function(){$('#' + selected).css('background-color', 'transparent')}, 1000);

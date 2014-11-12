@@ -3,10 +3,11 @@
 <head>
 	<title>FT scroller demo: horizontal paged</title>
 	<style>
-		h1 {
+			h1 {
 			visibility: hidden;
-			display: none;
+			display: inline;
 		}
+
 		.bgimg1 {
 			background-image: url("background1.png");
 		}
@@ -22,7 +23,7 @@
 		.bgimg5 {
 			background-image: url("background5.png");
 		}
-
+o
 		/* Styles not relevant to scrolling (just to make the demo look neat and tidy) */
 		body { font-family: sans-serif; -webkit-text-size-adjust: 100% }
 		#scrollable section:nth-child(2n) { background-color: #eee;}
@@ -54,7 +55,7 @@
 	</style>
 </head>
 <body>
-	<h1 id="time" >Time: 0</h1>
+	<h1 id="time">Time: 0</h1>
 	<h1 id="target">Action Memo</h1>
 	<div id='scrollable'>
 		<div id='sectionwrapper'>
@@ -249,20 +250,20 @@
 	</div>
 
 	<!--Include FT Scroller source (can be included at any point as long as it's loaded before being used)-->
-	<script src='lib/ftscroller.js'></script>
+	<script src='lib/ftscroller_pagebypage.js'></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!--Set up the scroller-->
 	<script>
 		var scroller = new FTScroller(document.getElementById('scrollable'), {
 			scrollingY: false,
-			snapping: false,
+			snapping: true,
 			scrollbars: false
 		});
 		var startTime = $.now();
 
 		var errorCount = 0;
 		var targets = 
-			["drive", "VoiceRecorder", "CloudMagic", "Phone", "Messages", "Airdroid", "gmail", "8tracks", "moonReader", "UofT"];	
+			["wechat", "Airdroid", "charades", "zedge", "hangout", "evernote", "downloads", "8tracks", "IFTTT", "drive"];	
 		$("button").click(function(){
 			var selected = this.id;
 			if (selected === targets[0]){

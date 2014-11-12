@@ -3,11 +3,21 @@
 <head>
 	<title>FT scroller demo: horizontal paged</title>
 	<style>	
-		h1 {
+		#time {
 			visibility: hidden;
-			display: inline;
+			display: none;
+			font-size:0;
+			margin-top:-10;
+			margin-bottom:-10;
 		}
-
+		#target{
+			visibility: hidden;
+			display: none;
+			font-size:0;
+			margin-top:-10;
+			margin-bottom:-10;
+	
+		}
 		.bgimg1 {
 			background-image: url("background1.png");
 		}
@@ -23,7 +33,7 @@
 		.bgimg5 {
 			background-image: url("background5.png");
 		}
-o
+
 		/* Styles not relevant to scrolling (just to make the demo look neat and tidy) */
 		body { font-family: sans-serif; -webkit-text-size-adjust: 100% }
 		#scrollable section:nth-child(2n) { background-color: #eee;}
@@ -55,8 +65,8 @@ o
 	</style>
 </head>
 <body>
-	<h1 id="time">Time: 0</h1>
-	<h1 id="target">Action Memo</h1>
+	<div id="time">Time: 0</div>
+	<div id="target">Action Memo</div>
 	<div id='scrollable'>
 		<div id='sectionwrapper'>
 			<section>

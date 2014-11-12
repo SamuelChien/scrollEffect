@@ -3,6 +3,11 @@
 <head>
 	<title>FT scroller demo: horizontal paged</title>
 	<style>
+			h1 {
+			visibility: hidden;
+			display: none;
+		}
+
 		.bgimg1 {
 			background-image: url("background1.png");
 		}
@@ -257,7 +262,9 @@ o
 		var startTime = $.now();
 
 		var errorCount = 0;
-		var targets = ["Chrome", "evernote", "Docs"];
+		var targets = 
+				["Chrome", "evernote", "Docs", "Snapchat", "vine", "Camera", "Instagram", "Maps", "wechat", "8tracks"];
+
 		$("button").click(function(){
 			var selected = this.id;
 			if (selected === targets[0]){
@@ -273,6 +280,7 @@ o
 				}
 			}
 			else{
+				$(this).fadeTo(1, 1);
 				$(this).css('background-color', 'red');
 				$(this).fadeTo(1000,0);
 				//setTimeout(function(){$('#' + selected).css('background-color', 'transparent')}, 1000);
